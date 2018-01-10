@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>ODD FUTURE</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
 	<link rel="stylesheet" href="CSS/Stylesheet.css" >
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIHRIjDMHbe2Wl1huw7-yXfmUrJ83_eOE&callback=getLocation"></script>
 	<script src="https://code.jquery.com/jquery-1.6.1.js" integrity="sha256-Du92qVg6bHoet2TTP+N2v+GGHfefq4LCw/XRYYPoIBY=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/jquery.easyui.min.js"></script>
 	<script src="JS/JavaScript.js"></script>
 
 </head>
@@ -15,6 +17,7 @@
 		<div>
 			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
 		</div>
+		<div>
 			<nav>
 				<a class="border-nav front-page-nav" href="index.html">Home </a> 
 				<img class="nav-img" src="assets/bee.jpg" alt="bee">
@@ -28,30 +31,29 @@
 			</nav>
 		</div>
 		<div id="selectIconMenu">
-			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
-			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
-			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
-			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png" alt="donutIcon"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png" alt="TylerIcon"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png" alt="dolphinIcon"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png" alt="catIcon"	></a>
 		</div>
 		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
-		<div>
 	</div>	
 <section id="indexSectionOne">
 	<div>
 		<div id="slider" class="slider-container">
-			<img class="mySlides" id="firstImage" src="assets/indexSlider/TylerWithMinion.png">
-			<img class="mySlides" src="assets/indexSlider/GOLFPoster.png">
-			<img class="mySlides" src="assets/indexSlider/TylerStanding.png">
-			<img class="mySlides" src="assets/indexSlider/TylerWithLeg.png">
+			<img class="mySlides" id="firstImage" src="assets/indexSlider/TylerWithMinion.png" alt="TylerWithAMinion">
+			<img class="mySlides" src="assets/indexSlider/GOLFPoster.png" alt="GOLFPoster">
+			<img class="mySlides" src="assets/indexSlider/TylerStanding.png" alt="TylerStanding">
+			<img class="mySlides" src="assets/indexSlider/TylerWithLeg.png" alt="TylerWithLeg">
 			
 			<button class="slider-button slider-black slider-display-left" onclick="plusDivs(-1)">&#10094;</button>
 			<button class="slider-button slider-black slider-display-right" onclick="plusDivs(1)">&#10095;</button>
 		</div>
 	</div>
-	<img id="oddFutureLogo" src="assets/Odd_Future_logo.png">
+	<img id="oddFutureLogo" src="assets/Odd_Future_logo.png" alt="oddFutureLogo">
 </section>
 <div class="bannerHolder">
-	<img id="indexBanner1" src="assets/OddFutureBanner1.png	">
+	<img id="indexBanner1" src="assets/OddFutureBanner1.png	" alt="oddFutureBanner">
 </div>
 <section id="indexSectionTwo">
 	<h1>Tours</h1>
@@ -64,28 +66,24 @@
 			<h3 class="tourInfo">Monday 29 January 2018</h3>
 			<p class="tourInfo"><strong>The armory</strong>, San Francisco, CA, US<p>
 		</li>
-		<hr>
 		<li class="tourDatesListItem">
 			<a onclick="tourMap({lat:37.768005,lng:-122.420528}, '1')"><span class="tourDatesMarkerIcon">A</span></a>
 			<h2 class="tourInfo">Tyler, The Creator</h2>
 			<h3 class="tourInfo">Tuesday 30 January 2018</h3>
 			<p class="tourInfo"><strong>The armory</strong>, San Francisco, CA, US<p>
 		</li>
-		<hr>
 		<li class="tourDatesListItem">
 			<a onclick="tourMap({lat:32.755548,lng:-117.212253}, '1')"><span class="tourDatesMarkerIcon">B</span></a>
 			<h2 class="tourInfo">Tyler, The Creator</h2>
 			<h3 class="tourInfo">Friday 02 February 2018</h3>
 			<p class="tourInfo"><strong>Valley View Casino Center</strong>, San Diego, CA, US<p>
 		</li>
-		<hr>
 		<li class="tourDatesListItem">
 			<a onclick="tourMap({lat:33.437016,lng:-111.943981}, '1')"><span class="tourDatesMarkerIcon">C</span></a>
 			<h2 class="tourInfo">Tyler, The Creator</h2>
 			<h3 class="tourInfo">Saturday 03 February 2018</h3>
 			<p class="tourInfo"><strong>Marquee Theatre</strong>, Tempe, AZ, US<p>
 		</li>
-		<hr>
 		<li class="tourDatesListItem">
 			<a onclick="tourMap({lat:39.099143,lng:-94.583846}, '1')"><span class="tourDatesMarkerIcon">D</span></a>
 			<h2 class="tourInfo">Tyler, The Creator</h2>
@@ -96,4 +94,4 @@
 	</div>
 </section>
 </body>
-<html>
+</html>
