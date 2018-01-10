@@ -1,6 +1,7 @@
 body {
 	background-color: #9ADFCC;
 	font-family: Cooper Black;
+	overflow-x: hidden;
 }
 nav {
 	font-family: Cooper Black;
@@ -55,6 +56,9 @@ a .nav-img{
 
 .header-canvas{
 	width: 100%;
+	max-width: 1500px;
+	height: 100px;
+	cursor: pointer;
 }
 #selectIcon{
 	font-size: 25px;
@@ -224,6 +228,7 @@ a .nav-img{
 	width: 36%;
 	height: 300px;
 	overflow: scroll;
+	overflow-x: hidden;
 	border: 3px solid white;
 	margin-top: -306px;
 	margin-right: 5%;
@@ -414,23 +419,68 @@ a .nav-img{
 	list-style-type: none;
 	margin-right: 5px;
 }
+.musicDiv{
+	width: 60%;
+    margin-top: 100px;
+    margin-left: 29.3%;
+    height: 200px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+@media only screen and (max-width: 1200px){
+	.musicDiv{
+		width: 50%;
+	}
+}
+.spotifyLink{
+	width: 99%;
+	height: 80px;
+}
+.albumTitle{
+	margin-bottom: 0px;
+    margin-top: 5px;
+    text-align: center;
+	color: cyan;
+}
+@media only screen and (max-width: 800px){
+	.modalImage{
+		display: none;
+	}
+	.modalTitle{
+		text-align: center;
+	}
+	.modalContent ul li{
+		margin-left: 10%;
+	}
+	.musicDiv{
+	width: 80%;
+    margin-top: 100px;
+    margin-left: 10%;
+	}
+	.spotifyLink{
+		width: 100%;
+		height: 80px;
+	}
+}
 /*Camp Flog Gnaw Page*/
 
 #CFG_mainImage{
-	position: absolute;
-	width: 20%;
-	left: 40%;
-	top: 200px;
+	width: 35%;
+    margin-left: 32.5%;
+    top: 200px;
 }
 
 #CFG_lineUp{
-	position: absolute;
-	top: 600px;
-	width: 66%;
-	left: 16%;
-	border: 50px ridge #463305;
+	width: 90%;
+    margin-left: 3%;
+    border: 30px ridge #463305;
 }
-
+@media only screen and (max-width: 900px){
+	#CFG_lineUp{
+		margin-left: 0%;
+		border-width: 20px;
+	}
+}
 /*Loiter Squad Page*/
 
 #LS_logo{
@@ -592,22 +642,26 @@ a .nav-img{
 /*Store*/
 
 #storeBody{
-	height: 2000px;
+	height: 4000px;
+	margin-bottom: 500px;
 }
-
 #showSortList{
 	position: fixed;
     top: 33%;
     left: -15px;
 }
+#storeSection{
+	height: 6600px;
+}
 #storeSort{
 	position: fixed;
-	margin-top: 5%;
+	margin-top: 0%;
 	background-color: #FFFE27;
 	border-radius: 15%;
 	margin-left: -200px;
 	width: 18%;
 	max-width: 150px;
+	z-index: 1;
 }
 #storeSort ol li{
 	display: block;
@@ -640,12 +694,31 @@ a .nav-img{
 	position: fixed;
 	width: 100%;
 	height: 200px;
-	bottom: 0px;
+	bottom: -173px;
 	left: -1px;
 	background-color: white;
 	border-top: 2px solid black;
 	resize: vertical;
 	
+}
+#showCart{
+	margin-top: -52px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 43%;
+    margin-bottom: 20px;
+    width: 15%;
+	background-color: white;
+	text-align: center;
+	border-radius: 10px;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+#emptyCart{
+	position: absolute;
+    top: 155px;
+    right: 185px;
 }
 #cartMsg{
 	position: absolute;
