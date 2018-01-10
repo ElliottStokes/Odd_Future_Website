@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Store</title>
+		<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script language="javascript" type="text/javascript" src="JS/JavaScript.js"></script>
+</head>
+
+<body id="storeBody">
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav front-page-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav front-page-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav front-page-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav front-page-nav" href="campFlogGnaw.html"> CAMP FLOG GNAW </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav front-page-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+		<div>
+	</div>
+	<a id="showSortList" onclick="showSortList()">Sort<br>Options</a>
+	<div id="storeSort">
+		<ol>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('storeItem')">All</button>
+			</li>
+			<hr>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('mens')">Mens</button>
+			</li>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('womens')">Womens</button>
+			</li>
+			<hr>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('outerwear')">Outerwear</button>
+			</li>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('hats')">Hats</button>
+			</li>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('shorts')">Shorts</button>
+			</li>
+			<hr>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('oddFuture')">Odd Future</button>
+			</li>
+			<li>
+				<button class="storeSortButton" onclick="storeSort('ofxrandys')">Randy's</button>
+			</li>
+		</ol>
+	</div>
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\men\OFAmuzementTee.jpg">
+		<h3 class="storeItemDetail storeItemName">Amuzement Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\men\OFEternityDonutHockeyJersey.jpg">
+		<h3 class="storeItemDetail storeItemName">Eternity Donut Hockey Jersey</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="40">£40</h4>
+	</div>
+	
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\men\OFNeonBreezeLongSleeve.jpg">
+		<h3 class="storeItemDetail storeItemName">Neon Breeze Long Sleeve</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="35">£35</h4>
+	</div>
+	
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\men\OFWhiteDonutTee.jpg">
+		<h3 class="storeItemDetail storeItemName">Donut Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="20">£20</h4>
+	</div>
+	
+	<div class="storeItem mens womens ofxrandys">
+		<img class="storeItemImg" src="assets\storeImages\men\OFxRandysDonutsTee.jpg">
+		<h3 class="storeItemDetail storeItemName">OF x Randy's Donuts Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="25">£25</h4>
+	</div>
+	
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\men\OFWingedDonutTee.jpg">
+		<h3 class="storeItemDetail storeItemName">Winged Donut Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+	<div class="storeItem mens womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\women\OFMellowHypeTee.jpg">
+		<h3 class="storeItemDetail storeItemName">Mellow Hype Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+	<div class="storeItem womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\women\OFRainbowCatTankBlack.jpg">
+		<h3 class="storeItemDetail storeItemName">Rainbow Cat Tank Top</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="25">£25</h4>
+	</div>
+	
+	<div class="storeItem womens oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\women\OFUSCrossTee.jpg">
+		<h3 class="storeItemDetail storeItemName">US Cross Tee</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+	<div class="storeItem hats oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFCollegeDonutHat.jpg">
+		<h3 class="storeItemDetail storeItemName">Donut Hat</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="20">£20</h4>
+	</div>
+	
+	<div class="storeItem hats oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFJasperDolphinHat(grey).jpg">
+		<h3 class="storeItemDetail storeItemName">Jasper Dolphin Hat</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="20">£20</h4>
+	</div>
+	
+	<div class="storeItem hats oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFLogoBucketHat(black).jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Bucket Hat</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="22">£22</h4>
+	</div>
+	
+	<div class="storeItem hats oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFLogoHat.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Logo Hat</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="20">£20</h4>
+	</div>
+	
+	<div class="storeItem hats oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFPomPomBeanie.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Pom Pom Beanie</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+	<div class="storeItem hats ofxrandys">
+		<img class="storeItemImg" src="assets\storeImages\hat\OFxRandyDonutsHat(pink).jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future x Randy's Donut Hat</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="25">£25</h4>
+	</div>
+	
+	<div class="storeItem shorts">
+		<img class="storeItemImg" src="assets\storeImages\shorts\AllOverDonutSwimshorts.jpg">
+		<h3 class="storeItemDetail storeItemName">Donut Swimshorts</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="25">£25</h4>
+	</div>
+	
+	<div class="storeItem shorts">
+		<img class="storeItemImg" src="assets\storeImages\shorts\DonutOBoardSwimshorts.jpg">
+		<h3 class="storeItemDetail storeItemName">Donut 'O' Board Swimshorts</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="40">£40</h4>
+	</div>
+
+	<div class="storeItem shorts oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\shorts\OFDonutShorts.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Donut Shorts</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="30">£30</h4>
+	</div>
+	
+	<div class="storeItem outerwear">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\DonutOLogoHoodedVarsityJacket.jpg">
+		<h3 class="storeItemDetail storeItemName">Donut 'O' Hooded Varsity Jacket</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="90">£90</h4>
+	</div>
+	
+	<div class="storeItem outerwear">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\InfinityOPulloverHoodie.jpg">
+		<h3 class="storeItemDetail storeItemName">Infinity 'O' Pullover Hoodie</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="50">£50</h4>
+	</div>
+	
+	<div class="storeItem outerwear oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OF&DonutOWindbreaker.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Windbreaker</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="70">£70</h4>
+	</div>
+	
+	<div class="storeItem outerwear oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OFBlack&WhiteCrewFleeceSweatshirt.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Crew Fleece Sweatshirt</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="80">£80</h4>
+	</div>
+	
+	<div class="storeItem outerwear oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OFHoodie.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Hoodie</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="50">£50</h4>
+	</div>
+	
+	<div class="storeItem outerwear oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OFSkiSweatshirt.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Ski Sweatshirt</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="55">£55</h4>
+	</div>
+	
+	<div class="storeItem outerwear oddFuture">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OFTieDyeHoodie.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future Tie Dye Hoodie</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="55">£55</h4>
+	</div>
+	
+	<div class="storeItem outerwear ofxrandys">
+		<img class="storeItemImg" src="assets\storeImages\outerwear\OFxRandysDonutsHoodie.jpg">
+		<h3 class="storeItemDetail storeItemName">Odd Future x Randy's Donut Hoodie</h3>
+		<h4 class="storeItemDetail storeItemPrice" data="80">£80</h4>
+	</div>
+	
+	<div class="cart">
+		<h2>Basket</h2>
+		<p id="cartMsg">Drag Here To Add To Cart</p>
+		<div id="innerCart">
+		<table id="cartContent" fitcolumns="true">
+			<thead>
+				<tr>
+					<th class="cartTH" field="Name" style="width:62%;height:auto">Name</th>
+					<th class="cartTH" field="Quantity" style="width:20%;height:auto">Quantity</th>
+					<th class="cartTH" field="Price" style="width:20%;height:auto">Price</th>
+				</tr>
+			</thead>
+		</table>
+		</div>
+		<p class="cartCount">Items: 0</p>
+		<p class="total">Total: £0</p>
+		<button id="emptyCart" onclick="emptyCart()">Empty Cart</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ODD FUTURE</title>
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIHRIjDMHbe2Wl1huw7-yXfmUrJ83_eOE&callback=getLocation"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
+		</div>
+			<nav>
+				<a class="border-nav front-page-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav front-page-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav front-page-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav front-page-nav" href="campFlogGnaw.html"> CAMP FLOG GNAW </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav front-page-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+		<div>
+	</div>	
+<section id="indexSectionOne">
+	<div>
+		<div id="slider" class="slider-container">
+			<img class="mySlides" id="firstImage" src="assets/indexSlider/TylerWithMinion.png">
+			<img class="mySlides" src="assets/indexSlider/GOLFPoster.png">
+			<img class="mySlides" src="assets/indexSlider/TylerStanding.png">
+			<img class="mySlides" src="assets/indexSlider/TylerWithLeg.png">
+			
+			<button class="slider-button slider-black slider-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button class="slider-button slider-black slider-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+	</div>
+	<img id="oddFutureLogo" src="assets/Odd_Future_logo.png">
+</section>
+<div class="bannerHolder">
+	<img id="indexBanner1" src="assets/OddFutureBanner1.png	">
+</div>
+<section id="indexSectionTwo">
+	<h1>Tours</h1>
+	<div id="googleMap"></div>
+	<div id="tourDates">
+	<ul id="tourDatesList">
+		<li class="tourDatesListItem">
+			<a onclick="tourMap({lat:37.768005,lng:-122.420528}, '1')"><span class="tourDatesMarkerIcon">A</span></a>
+			<h2 class="tourInfo">Tyler, The Creator</h2>
+			<h3 class="tourInfo">Monday 29 January 2018</h3>
+			<p class="tourInfo"><strong>The armory</strong>, San Francisco, CA, US<p>
+		</li>
+		<hr>
+		<li class="tourDatesListItem">
+			<a onclick="tourMap({lat:37.768005,lng:-122.420528}, '1')"><span class="tourDatesMarkerIcon">A</span></a>
+			<h2 class="tourInfo">Tyler, The Creator</h2>
+			<h3 class="tourInfo">Tuesday 30 January 2018</h3>
+			<p class="tourInfo"><strong>The armory</strong>, San Francisco, CA, US<p>
+		</li>
+		<hr>
+		<li class="tourDatesListItem">
+			<a onclick="tourMap({lat:32.755548,lng:-117.212253}, '1')"><span class="tourDatesMarkerIcon">B</span></a>
+			<h2 class="tourInfo">Tyler, The Creator</h2>
+			<h3 class="tourInfo">Friday 02 February 2018</h3>
+			<p class="tourInfo"><strong>Valley View Casino Center</strong>, San Diego, CA, US<p>
+		</li>
+		<hr>
+		<li class="tourDatesListItem">
+			<a onclick="tourMap({lat:33.437016,lng:-111.943981}, '1')"><span class="tourDatesMarkerIcon">C</span></a>
+			<h2 class="tourInfo">Tyler, The Creator</h2>
+			<h3 class="tourInfo">Saturday 03 February 2018</h3>
+			<p class="tourInfo"><strong>Marquee Theatre</strong>, Tempe, AZ, US<p>
+		</li>
+		<hr>
+		<li class="tourDatesListItem">
+			<a onclick="tourMap({lat:39.099143,lng:-94.583846}, '1')"><span class="tourDatesMarkerIcon">D</span></a>
+			<h2 class="tourInfo">Tyler, The Creator</h2>
+			<h3 class="tourInfo">Wednesday 07 February 2018</h3>
+			<p class="tourInfo"><strong>Arvest Bank Theatre at The Midland</strong>, Kansas City, MO, US<p>
+		</li>
+	</ul>
+	</div>
+</section>
+</body>
+<html>

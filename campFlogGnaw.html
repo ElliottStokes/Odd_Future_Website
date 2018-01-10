@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Camp Flog Gnaw page</title>
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav" href="campFlogGnaw.html"> CAMP FLOG GNAW </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+		<div>
+	</div>
+	<div>
+		<img id="CFG_mainImage" src="assets/CFG_officalLogo.png" alt="CAMP FLOG GNAW">
+		<img id="CFG_lineUp" src="assets/CFG_lineUp.jpg" alt="CAMP FLOG GNAW LINE UP">
+	</div>
+</body>
+</html>

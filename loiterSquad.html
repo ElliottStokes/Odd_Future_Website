@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Loiter Squad</title>
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav front-page-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav front-page-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav front-page-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav front-page-nav" href="campFlogGnaw.html"> CAMP FLOG GNAW </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav front-page-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+		<div>
+	</div>
+		<div>
+			<img id="LS_logo" src="assets/loiterSquad.png">
+			<img id="AS_logo" src="assets/adultswim.jpg">
+			<div id="LS_videoDiv">
+				<a id="showFavButton" onclick="showFavourite()">Show Favourite</a>
+				<a id="hideFavButton" onclick="hideFavourite()">Hide Favourite</a>
+				<div class="LS_favVideoArea">
+					<h1 id="favHeader">FAVOURITE</h1>
+					<iframe id="LS_favVideoFrame" class="LS_videoFrame" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<hr id="favBreak">
+					<h2 id="LS_favVideoTitle"></h2>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/Davn72GNlfI?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle">Po-Po: Drug Bust</h2>
+					<a id="Davn72GNlfI" class="favButton   LS_video1" onclick="favouriteVideo(1, 'Po-Po: Drug Bust')" data="Davn72GNlfI">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame LS_video" src="https://www.youtube.com/embed/29E50fzcCHg?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle LS_titleEven">Maurice Cracks Up</h2>
+					<a id="29E50fzcCHg" class="favButton favButtonEven LS_video2" onclick="favouriteVideo(2, 'Maurice Cracks Up')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" width="560" height="315" src="https://www.youtube.com/embed/KKJwnGfPULQ?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle">Carl's Wake</h2>
+					<a id="KKJwnGfPULQ" class="favButton LS_video3" onclick="favouriteVideo(3, 'Carls Wake')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/YRv6v_ScrJo?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle LS_titleEven">Storage Wars</h2>
+					<a id="YRv6v_ScrJo" class="favButton favButtonEven LS_video4" onclick="favouriteVideo(4, 'Storage Wars')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/jZVjh2DEeB8?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle">Thurnis Haley Laundromat</h2>
+					<a id="jZVjh2DEeB8" class="favButton LS_video5" onclick="favouriteVideo(5, 'Thurnis Haley Laundromat')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/ZmNc4VNQXuA?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle LS_titleEven">Armless Dentist</h2>
+					<a id="ZmNc4VNQXuA" class="favButton favButtonEven LS_video6" onclick="favouriteVideo(6, 'Armless Dentist')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/dBHJ4yF2wLs?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle">Left Brain Reporter</h2>
+					<a id="dBHJ4yF2wLs" class="favButton LS_video7" onclick="favouriteVideo(7, 'Left Brain Reporter')" type="button">Favourite</a>
+				</div>
+				<div class="LS_videoArea">
+					<iframe class="LS_videoFrame" src="https://www.youtube.com/embed/yfJlA4iT-iY?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+					<h2 class="LS_videoTitle LS_titleEven">The Art Of Lurking</h2>
+					<a id="yfJlA4iT-iY" class="favButton favButtonEven LS_video8" onclick="favouriteVideo(8, 'The Art Of Lurking')" type="button">Favourite</a>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
+		

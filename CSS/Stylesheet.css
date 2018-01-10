@@ -1,0 +1,742 @@
+body {
+	background-color: #9ADFCC;
+	font-family: Cooper Black;
+}
+nav {
+	font-family: Cooper Black;
+	text-align: center;
+	background-color: #FFFE27;
+	width: 80%;
+	max-width: 2000px;
+	margin-left: 10%;
+	padding-top: 0%;
+	padding-bottom: .5%;
+	border-radius: 10px;
+}
+
+.header{
+	padding-bottom: 1%;
+}
+
+@media only screen and (max-width: 900px){
+	.header{
+		padding-bottom: 3%;
+	}
+}
+
+a {
+	top: 0%;
+	text-decoration: none;
+	color: #FF8DA4;
+	font-size: 180%;
+	padding-right: 2.5%;
+	padding-left: 2.5%;
+	padding-bottom: 2.5%;
+	text-align: center;
+	cursor: pointer;
+}
+
+a #border-nav{
+	border-right: 3px solid black;
+	padding-bottom: 2%;
+}
+
+a:hover{
+	color: #00725B;
+}
+
+a .nav-img{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	max-width: 0.5%;
+	height: auto;
+}
+
+.header-canvas{
+	width: 100%;
+}
+#selectIcon{
+	font-size: 25px;
+	width: 10px;
+	background-color: red;
+    padding: 9px 12px;
+    border-radius: 10px;
+    margin-left: -16px;
+    margin-bottom: -70px;
+    margin-top: 50px;
+}
+#selectIconMenu{
+	position: absolute;
+	top: -15px;	
+	width: 50px;
+    background-color: red;
+    margin-left: -330px;
+    padding: 10px 14px 13px 30px;
+    border-radius: 15px;
+	margin-top: 13px;
+    margin-bottom: -105px;
+}
+#showIconButton{
+	position: absolute;
+	top: 0px;
+	text-decoration: none;
+	color: #FF8DA4;
+	font-size: 180%;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	text-align: none;
+	cursor: pointer;
+}
+.iconMenu{
+	height: 50px;
+    width: auto;
+    margin-left: -18px;
+    margin-right: -5px;
+    padding-left: 5px;
+    margin-top: 0px;
+    margin-bottom: -12px;
+}
+#indexSectionOne{
+	background-color: black;
+    margin-top: 10px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.slider-container{
+	position:absolute;
+	top: 200px;
+	left: 10%;
+	margin-top: 100px;
+	margin: auto;
+	width: 40%;
+	max-width: 380px; 	
+	height: auto;
+	max-height: 358px;
+	float: left;
+}
+#oddFutureLogo{
+	width: 50%;
+	max-width: 461px;
+    margin-left: 50%;
+}
+@media only screen and (max-width: 1000px){
+	.slider-container{
+		top: 200px;
+	}
+}
+@media only screen and (max-width: 680px){
+	.header{
+		padding-bottom: 5%;
+	}
+	.slider-container{
+		top: 290px;	
+		width: 80%;
+		max-width: 1000px;
+		margin-left: 11%;
+		margin-right: 11%;
+		left: 0;
+	}
+	#oddFutureLogo{
+		width: 80%;
+		margin: 0px 10%;
+	}	
+	#indexSectionOne{
+		padding-top: 600px;
+		padding-bottom: 50px;
+	}
+}
+
+.slider-button{
+	border: none;
+	display: inline-block;
+	outline: 0px;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow:hidden;
+	text-decoration:none;
+	color:inherit;
+	background-color: inherit;
+	text-align:center;
+	cursor:pointer;
+	white-space:nowrap;
+}
+.slider-black{
+	color: #000!important;
+	background-color:#fff!important;
+}
+.slider-black:hover{
+	background-color: #FF8DA4!important;
+}
+.slider-display-left{
+	position:absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%, -50%);
+}
+.slider-display-right{
+	position: absolute;
+	top:50%;
+	right: 0px;
+	transform:translate(0%,-50%);
+}
+.mySlides {
+	width: 100%;
+	border: 3px solid white;
+}
+
+#indexSectionTwo{
+	background-color: black;
+    margin-top: -5px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.bannerHolder{
+    margin-left: -20px;
+    margin-right: -20px;
+}
+#indexBanner1{
+	width: 102%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+#indexSectionTwo h1{
+	color: #FFFE27;
+	text-align: center;
+	font-size: 30px;
+}
+#googleMap{
+	width:50%;
+	height: 300px;
+	border: 3px solid white;
+	
+}
+#tourDates{
+	width: 36%;
+	height: 300px;
+	overflow: scroll;
+	border: 3px solid white;
+	margin-top: -306px;
+	margin-right: 5%;
+	float: right;
+}
+#tourDatesList{
+	-webkit-padding-start: 10px;
+}
+.tourDatesMarkerIcon{
+	background-color: #fa6d61;
+    border-radius: 36px;
+    padding: 5px 8px;
+    margin-left: 45%;
+	color: black;
+	margin-bottom: 5px;
+}
+.tourDatesMarkerIcon:hover{
+	color: white;
+	background-color: #FF8DA4;
+	}
+.tourInfo{
+    background-color: #6a6a6a63;
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: -10px;
+    padding-left: 10px;
+}
+.tourInfo:nth-child(odd){
+	background-color: #ffffff00;
+}
+#tourDatesList hr{
+	margin-left: -13px;
+    width: 103%;
+    margin-top: -16px;
+    border: 4px dashed #ff8da4;
+}
+/*Members page*/
+
+#membersMenu{
+	margin-top: 8%;
+}
+.member-row{
+	border-top: 3px solid #FFFFFF;
+	width: 100%;
+	height: 200px;
+}
+.member-row:nth-child(even) {
+	background-color: #FF8DA4;
+}
+
+@media only screen and (max-width: 500px){
+	img .member-port{
+		display: none;
+	}
+}
+
+.member-port{
+	border-radius: 100%;
+	margin: 1% 3% 0.5% 1%;
+	width: 15%;
+	min-width: 150px;
+	max-width: 160px;
+	max-height: 300px;
+	float: left;
+}
+
+.member-header{
+	margin: 1% 0% 1% 1%;
+}
+
+
+.member-button{
+	color: #FFFE27;
+	text-align: left;
+	display: block;
+	top: 100px;
+	margin-left: 200px;
+	padding: 0px;
+	width: 100px;
+}
+.member-button:nth-of-type(even) {
+	color: #317274;
+}
+
+@media only screen and (max-width: 600px) {
+	.member-row{
+		border-top: 3px solid #FFFFFF;
+		width: 100%;
+		height: 350px;
+	}
+	.member-port{
+		border-radius: 100%;
+		margin: 1% 32% 1% 32%;
+		width: 15%;
+		min-width: 150px;
+		max-width: 160px;
+		max-height: 300px;
+		text-align: center;
+	}
+
+	.member-header{
+		text-align: center;
+		margin: 1% 0% 1% 1%;
+	}
+
+
+	.member-button{
+		text-align: left;
+		display: block;
+		top: 100px;
+	}
+	
+	#Tyler-member-box{
+		margin-top:100px;
+	}
+}
+
+.memberModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: #2B2B1F;
+	background-color: rgba(0,0,0,0.4);
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s;
+}
+.modalContent{
+	background-color: #2B2B1F;
+	margin: auto;
+	border: 5px dashed #FF8DA4;
+	width: 70%;
+	height: 400px;
+	-webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+@-webkit-keyframes slideIn{
+	from {:; opacity: 0;}
+	to {opacity: 1;}
+}
+@keyframes slideIn {
+    from {:; opacity: 0}
+    to {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+.closeModal{
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+.closeModal:hover{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+.modalImage{
+	height: 100%;
+	width: auto;
+	max-width: 33%;
+	float: left;
+	margin-right: 50px;
+	border-right: 5px dashed #FF8DA4;
+}
+.modalTitle{
+	color: #FFFE27;
+}
+.modalContent ul li{
+	float: left;
+	list-style-type: none;
+	margin-right: 5px;
+}
+/*Camp Flog Gnaw Page*/
+
+#CFG_mainImage{
+	position: absolute;
+	width: 20%;
+	left: 40%;
+	top: 200px;
+}
+
+#CFG_lineUp{
+	position: absolute;
+	top: 600px;
+	width: 66%;
+	left: 16%;
+	border: 50px ridge #463305;
+}
+
+/*Loiter Squad Page*/
+
+#LS_logo{
+	margin: 100px 30% -5px 20%;
+}
+#AS_logo{
+	margin: 1px 30% 0px;
+}
+@media only screen and (max-width: 1100px) {
+	#LS_logo{margin-left: 15%; width: 80%; height: auto;}
+}
+@media only screen and (max-width: 900px) {
+	#LS_logo{margin-left: 10%;}
+}
+#LS_videoDiv{
+	width: 110%;
+	height: 3000px;
+	margin-left: -5%;
+	margin-top: -204px;
+	margin-bottom: -100px;
+	padding-top: 200px;
+	background-color: black;
+}
+.LS_videoArea{
+	width: 30%;
+	height: 300px;
+	margin-left: 15%;
+	margin-bottom: 50px;
+	border: 5px solid #FFFFFF;
+}
+.LS_videoArea:nth-of-type(odd){
+	margin-left: 60%;
+}
+.LS_favVideoArea{
+	width: 80%;
+	height: 730px;
+	margin-left: 10%;
+	margin-bottom: 50px;
+	border: 5px solid #FFFFFF;
+	display: none;
+}
+#favHeader{
+	color: #FFFE27;
+	text-align: center;
+	margin-top: -65px;
+    font-size: 57px;
+}
+#showFavButton{
+	margin-left: 38%;
+}
+#hideFavButton{
+	margin-left: -65%;
+    margin-bottom: -23px;
+    font-size: 20px;
+	display: none;
+}
+#LS_favVideoFrame{
+	height: 80%;
+	width: 99%;
+}
+#favBreak{
+	border: 3px solid white;
+	width: 100%;
+	margin-left: -0.5%;
+}
+#LS_favVideoTitle{
+	color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.LS_videoFrame{
+	width: 100%;
+	height: 100%;
+}
+.LS_videoTitle{
+	color: white;
+	text-align: left;
+	margin-top: -170px;
+	margin-right: -130%;
+	padding-left: 105%;
+	font-size: 300%;
+}
+.LS_titleEven{
+	text-align: right;
+	margin-right: 0px;
+	margin-left: -400px;
+	padding-left: 0px;
+	padding-right: 106%
+}
+.favButton{
+	background-color: black;
+	color: white;
+	border: 3px solid white;
+	border-radius: 10px;
+	padding: 5px;
+	font-family: Cooper Black;
+	font-size: 30px;
+	cursor: pointer;
+	margin-top: -170px;
+	margin-left: 105%;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.favButtonEven{
+	margin-right: 0px;
+	margin-left: -50%;
+}
+@media only screen and (max-width: 1100px) {
+	.favButtonEven{
+		margin-left: -70%;
+	}
+}
+.favButton:hover{
+	background-color: #FFFE27;
+	color: black;
+}
+.favButton:active{
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 800px) {
+	#LS_videoDiv{height:5000px;}
+	#AS_logo{width:540px;height:auto;margin:21px -5% 0px;}
+	.LS_videoArea{
+		width: 80%;
+		margin-left: 10%;
+		margin-bottom: 200px;
+	}
+	.LS_videoArea:nth-of-type(odd){
+		width: 80%;
+		margin-left: 10%;
+	}
+	.LS_videoTitle{
+		text-align: center;
+		margin-top: 0px;
+		padding-left: 0px;
+		margin-right: 0px;
+		font-size: 35px;
+	}
+	.LS_titleEven{
+		text-align: center;
+		margin-top: 0px;
+		padding-left: 0px;
+		margin-right: 0px;
+		padding-right: 0px;
+		margin-left: 0px;
+	}
+	.favButton{
+		margin-top: -30px;
+		margin-left: 33%;
+	}
+	.favButtonEven{
+		margin-top: -30px;
+		margin-left: 33%;
+	}
+}
+
+/*Store*/
+
+#storeBody{
+	height: 2000px;
+}
+
+#showSortList{
+	position: fixed;
+    top: 33%;
+    left: -15px;
+}
+#storeSort{
+	position: fixed;
+	margin-top: 5%;
+	background-color: #FFFE27;
+	border-radius: 15%;
+	margin-left: -200px;
+	width: 18%;
+	max-width: 150px;
+}
+#storeSort ol li{
+	display: block;
+	margin-left: -30px;
+}
+#storeSort ol hr{
+	width: 100%;
+	margin-left: -10px;
+}
+.storeSortButton{
+	text-decoration: none;
+    background: none;
+    border: none;
+    font-family: cooper black;
+    font-size: 133%;
+	cursor: pointer;
+	text-align: left;
+	border-radius: 10px;
+}
+.storeSortButton:hover{
+	background-color: #FF8DA4;
+}
+@media only screen and (max-width: 950px){
+	.storeSortButton{
+		font-size: 100%;
+	}
+}
+
+.cart{
+	position: fixed;
+	width: 100%;
+	height: 200px;
+	bottom: 0px;
+	left: -1px;
+	background-color: white;
+	border-top: 2px solid black;
+	resize: vertical;
+	
+}
+#cartMsg{
+	position: absolute;
+	top: -10px;
+	text-align:center;
+	width: 100%;
+	font-size: 100%;
+}
+#innerCart{
+	width:60%;
+	margin-left:10%;
+	max-height: 150px;
+	overflow: scroll;
+}
+#cartContent{
+	border: 2px solid black;
+    width: 40%;
+    margin-left: 5%;
+    height: 130px;
+	display: block;
+}
+.cartTH{
+	width:33%;
+	text-align: right;
+}
+.cart h2{
+	margin-top: -15px;
+	margin-left: 50px;
+	background-color: white;
+	width: 100px;
+	text-align: center;
+	border-radius: 10px;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.cartCount{
+	position: absolute;
+    top: 25px;
+    left: 77%;
+}
+.total{
+	position: absolute;
+    top: 50px;
+    left: 77%;
+}
+.storeItem{
+	border: 3px solid black;
+    margin-top: 100px;
+    margin-left: 13.3%;
+    width: 30%;
+	max-width: 400px;
+    height: auto;
+	background-color: #FF8DA4;
+	float: left;
+}
+@media only screen and (max-width: 720px){
+	.storeSortButton{
+		font-size: 120%;
+	}
+	#storeSort{
+		width: 20%;
+		min-width: 125px;
+	}
+	.storeItem{
+		margin-left: 25%;
+		width: 50%;
+		max-width: 500px;
+	}
+	#cartMsg{
+		text-align: right;
+		font-size: 15px;
+		top: 0px;
+	}
+}
+@media only screen and (max-width: 450px){
+	.storeItem{
+		margin-left: 40%;
+	}
+}
+
+.storeItemImg{
+	width: 100%;
+	max-width: 400px;
+	height: width;
+	margin-bottom: -2px;
+}
+
+.storeItemDetail{
+	text-align: center;
+	margin: 3px;
+}

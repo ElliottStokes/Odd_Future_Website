@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Members page</title>
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500px" height="100px"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav" href="campFlogGnaw.html"> CAMP FLOG GNAW </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+		<div>
+	</div>
+	<div id="membersMenu">
+	<div id="Tyler-member-box" class="member-row">
+		<img id="Tyler-memberPage" class="member-port" src="assets/membersPortraits/Tyler.jpg" alt="Tyler">
+		<h3 id="Tyler-header" class="member-header">Tyler! The Creator</h3>
+		<p>Leader and Co-Founder<br>The guy behind the albums: Goblin, Wolf, Cherry Bomb and, most recently, Flower Boy.<br></p>
+		<a class="member-button" onclick="openModal('TylerModal')"><h6>See More</h6></a>
+	</div>
+	<div id="Earl-member-box" class="member-row">
+		<img id="Earl-member-page" class="member-port" src="assets/membersPortraits/Earl.jpg" alt="Earl">
+		<h3 id="Earl-header" class="member-header">Earl Sweatshirt</h3>
+		<p>Joined 2009<br>The guy behind the albums: Doris and I Don't Give A Shit, I Don't Go Outside: An Album by Earl Sweatshirt<br></p>
+		<h6><a class="member-button" onclick="openModal('EarlModal')"> See More </a></h6>
+	</div>
+	<div id="Frank-member-box" class="member-row">
+		<img id="Frank-member-page" class="member-port" src="assets/membersPortraits/Frank.jpeg" alt="Frank">
+		<h3 id="Frank-header" class="member-header">Frank Ocean</h3>
+		<p>Joined in 2010<br>The guy behind the albums: Channel Orange and Blonde<br></p>
+		<h6><a class="member-button" onclick="openModal('FrankModal')"> See More </a></h6>
+	</div>	
+	<div id="Hodgy-member-box" class="member-row">
+		<img id="Hodgy-member-page" class="member-port" src="assets/membersPortraits/Hodgy.jpg" alt="Hodgy">
+		<h3 id="Hodgy-header" class="member-header">Hodgy</h3>
+		<p>Founding Member<br>The guy behind: Fireplace: TheNotTheOtherSide<br></p>
+		<h6><a class="member-button" onclick="openModal('HodgyModal')"> See More </a></h6>
+	</div>
+	<div id="Domo-member-box" class="member-row">
+		<img id="Domo-member-page" class="member-port" src="assets/membersPortraits/Domo.jpg" alt="Domo Genesis">
+		<h3 id="Domo-header" class="member-header">Domo Genesis</h3>
+		<p>Founding Member<br>The guy behind: Genesis and Purple Corolla (Chopnotslop)<br></p>
+		<h6><a class="member-button" onclick="openModal('DomoModal')"> See More </a></h6>
+	</div>	
+	<div id="Left-member-box" class="member-row">
+		<img id="Left-member-page" class="member-port" src="assets/membersPortraits/Left.jpeg" alt="Left Brain">
+		<h3 id="Left-header" class="member-header">Left Brain</h3>
+		<p>Founding Member<br>He hasn't released an album yet...<br></p>
+		<h6><a class="member-button" onclick="openModal('LeftModal')"> See More </a></h6>
+	</div>	
+	<div id="Mike-member-box" class="member-row">
+		<img id="Mike-member-page" class="member-port" src="assets/membersPortraits/Mike.jpg" alt="Mike G">
+		<h3 id="Mike-header" class="member-header">Mike G</h3>
+		<p>Joined in 2009<br>The guy behind: Ali, Long Tall Chuco, Blackjack, Mike Check Vol. II and Mike Check<br></p>
+		<h6><a class="member-button" onclick="openModal('MikeModal')"> See More </a></h6>
+	</div>	
+	<div id="Taco-member-box" class="member-row">
+		<img id="Taco-member-page" class="member-port" src="assets/membersPortraits/Taco.jpeg" alt="Taco">
+		<h3 id="Taco-header" class="member-header">Taco</h3>
+		<p>Joined in 2009<br>He hasn't released an album yet...<br></p>
+		<h6><a class="member-button" onclick="openModal('TacoModal')"> See More </a></h6>
+	</div>	
+	<div id="Jasper-member-box" class="member-row">
+		<img id="Jasper-member-page" class="member-port" src="assets/membersPortraits/Jasper.jpg" alt="Jasper Dolphin">
+		<h3 id="Jasper-header" class="member-header">Jasper Dolphin</h3>
+		<p>Founding Member<br>More of a hype man for the group<br></p>
+		<h6><a class="member-button" onclick="openModal('JasperModal')"> See More </a></h6>
+	</div>	
+	<div id="L-member-box" class="member-row">
+		<img id="L-member-page" class="member-port" src="assets/membersPortraits/LBoy.jpg" alt="L-Boy">
+		<h3 id="L-header" class="member-header">L-Boy</h3>
+		<p>Joined in 2011<br>Just a hypeman really<br></p>
+		<h6><a class="member-button" onclick="openModal('LBoyModal')"> See More </a></h6>
+	</div>
+	</div>
+	<div id="TylerModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="TylerModalImg" class="modalImage" src="assets/membersPortraits/TylerModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Tyler! The Creator</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/tylerthecreator?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/feliciathegoat/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="EarlModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="EarlModalImg" class="modalImage" src="assets/membersPortraits/EarlModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Earl Sweatshirt</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/earlxsweat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/artist/3A5tHz1SfngyOZM2gItYKu" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/soapmanwun/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+		<div id="FrankModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="FrankModalImg" class="modalImage" src="assets/membersPortraits/FrankModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Frank Ocean</h2>
+		<ul>
+			<li>
+				<a href="https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/itsfrankocean/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+		</div>
+	<div id="FrankModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="FrankModalImg" class="modalImage" src="assets/membersPortraits/FrankModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Frank Ocean</h2>
+		<ul>
+			<li>
+				<a href="https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/itsfrankocean/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+		</div>
+	<div id="HodgyModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="HodgyModalImg" class="modalImage" src="assets/membersPortraits/HodgyModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Hodgy</h2>
+		<ul>
+			<li>
+				<a href="https://open.spotify.com/artist/4sXi6Uq6IzBaLfFi8wlb3I" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/monkmiyagi/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="DomoModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="DomoModalImg" class="modalImage" src="assets/membersPortraits/DomoModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Domo Genesis</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/DamierGenesis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/artist/6vHBuUxrcpn1do5UaEJ7g6?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/domogenesis/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="LeftModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="LeftModalImg" class="modalImage" src="assets/membersPortraits/LeftModal.jpg" alt="Tyler">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Left Brain</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/leftbrainnn?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/artist/4vSjwZEchIL4yA0uLzoNjr?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/thatniggaleft1k/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="MikeModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="MikeModalImg" class="modalImage" src="assets/membersPortraits/MikeModal.jpg" alt="Mike">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Mike G</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/MikeGKTA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://open.spotify.com/artist/1QdjL34EAib5zndNoqA2ly?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/gomikeg/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="TacoModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="TacoModalImg" class="modalImage" src="assets/membersPortraits/TacoModal.jpg" alt="Taco">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Taco</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/oddfuckingtaco?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/yungtaco/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="JasperModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="JasperModalImg" class="modalImage" src="assets/membersPortraits/JasperModal.jpg" alt="Taco">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">Jasper Dolphin</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/JasperDolphin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/nastyboyjasper/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
+	<div id="LBoyModal" class="memberModal">
+	  <div class="modalContent">
+		<img id="LBoyModalImg" class="modalImage" src="assets/membersPortraits/LBoyModal.jpg" alt="Taco">
+		<span class="closeModal" onclick="closeModal()">&times;</span>
+		<h2 class="modalTitle">L-Boy</h2>
+		<ul>
+			<li>
+				<a href="https://twitter.com/themustacheman?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/damustacheman/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+			</li>
+		</ul>
+	  </div>
+	</div>
