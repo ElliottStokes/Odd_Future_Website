@@ -232,7 +232,7 @@ $(function(){
 	$('.cart').droppable({
 		onDrop:function(e,source){
 			var name = $(source).find('h3.storeItemName').text();
-			var price = $(source).find('h4.storeItemPrice').attr("data");
+			var price = $(source).find('h4.storeItemPrice').attr("data-price");
 
 			addProduct(name, parseFloat(price));
 			cartArray.push({Name:name,Price:price,Quantity:1});

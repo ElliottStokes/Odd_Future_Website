@@ -2,9 +2,11 @@
 <html>
 <head>
 	<title>Members page</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	
 	<link rel="stylesheet" href="CSS/Stylesheet.css" >
 	<script src="https://code.jquery.com/jquery-1.6.1.js" integrity="sha256-Du92qVg6bHoet2TTP+N2v+GGHfefq4LCw/XRYYPoIBY=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+	<script src="JS/jquery.easyui.min.js"></script>
 	<script src="JS/JavaScript.js"></script>
 </head>
 
@@ -27,14 +29,14 @@
 			</nav>
 		</div>
 		<div id="selectIconMenu">
-			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png"></a>
-			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png"></a>
-			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png"></a>
-			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png"></a>
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png" alt="donut"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png" alt="Tyler"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png" alt="dolphin"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png" alt="cat"></a>
 		</div>
 		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
-		<div>
 	</div>
+	
 	<div id="membersMenu">
 	<div id="Tyler-member-box" class="member-row">
 		<img id="Tyler-memberPage" class="member-port" src="assets/membersPortraits/Tyler.jpg" alt="Tyler">
@@ -104,134 +106,134 @@
 		<h2 class="modalTitle">Tyler! The Creator</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/tylerthecreator?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/tylerthecreator?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/4V8LLVI7PbaPR0K2TGSxFF?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/feliciathegoat/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/feliciathegoat/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">Flower Boy</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/2nkto6YNI4rUYTLqEwWJ3o" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/2nkto6YNI4rUYTLqEwWJ3o"></iframe>
 			<h2 class="albumTitle">Cherry Bomb</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/621OhgnZJ7Pz8iUazct1In" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/621OhgnZJ7Pz8iUazct1In"></iframe>
 			<h2 class="albumTitle">Wolf</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/40QTqOBBxCEIQlLNdSjFQB" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/40QTqOBBxCEIQlLNdSjFQB"></iframe>
 			<h2 class="albumTitle">Goblin</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/1YVf1gCvpUKr0YGtgFVmfm" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/1YVf1gCvpUKr0YGtgFVmfm"></iframe>
 		</div>
 	  </div>
 	</div>
 	<div id="EarlModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="EarlModalImg" class="modalImage" src="assets/membersPortraits/EarlModal.jpg" alt="Tyler">
+		<img id="EarlModalImg" class="modalImage" src="assets/membersPortraits/EarlModal.jpg" alt="Earl">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Earl Sweatshirt</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/earlxsweat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/earlxsweat?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://open.spotify.com/artist/3A5tHz1SfngyOZM2gItYKu" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/3A5tHz1SfngyOZM2gItYKu" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/soapmanwun/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/soapmanwun/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">I Don't Give a Shit, I Don't Go Outside: An Album By Earl Sweatshirt</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3wUv2IjD5hPrqlPakpczQa" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3wUv2IjD5hPrqlPakpczQa"></iframe>
 			<h2 class="albumTitle">Doris</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5vRfIDOPJHy3W2wHWbzLlE" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5vRfIDOPJHy3W2wHWbzLlE"></iframe>
+	    </div>
 	  </div>
-	</div>
 	</div>
 	<div id="FrankModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="FrankModalImg" class="modalImage" src="assets/membersPortraits/FrankModal.jpg" alt="Tyler">
+		<img id="FrankModalImg" class="modalImage" src="assets/membersPortraits/FrankModal.jpg" alt="Frank">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Frank Ocean</h2>
 		<ul>
 			<li>
-				<a href="https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/2h93pZq0e7k5yf4dywlkpM?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/itsfrankocean/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/itsfrankocean/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">Blonde</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3mH6qwIy9crq0I9YQbOuDf"></iframe>
 			<h2 class="albumTitle">Channel Orange</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/623Ef2ZEB3Njklix4PC0Rs" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/623Ef2ZEB3Njklix4PC0Rs"></iframe>
 		</div>
 	  </div>
 	</div>
 	<div id="HodgyModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="HodgyModalImg" class="modalImage" src="assets/membersPortraits/HodgyModal.jpg" alt="Tyler">
+		<img id="HodgyModalImg" class="modalImage" src="assets/membersPortraits/HodgyModal.jpg" alt="Hodgy">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Hodgy</h2>
 		<ul>
 			<li>
-				<a href="https://open.spotify.com/artist/4sXi6Uq6IzBaLfFi8wlb3I" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/4sXi6Uq6IzBaLfFi8wlb3I" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/monkmiyagi/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/monkmiyagi/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">Fireplace: TheNotTheOtherSide</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/13Yu1CGlfcmJ4tXwXBnJOg" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/13Yu1CGlfcmJ4tXwXBnJOg"></iframe>
 		</div>
 	  </div>
 	</div>
 	<div id="DomoModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="DomoModalImg" class="modalImage" src="assets/membersPortraits/DomoModal.jpg" alt="Tyler">
+		<img id="DomoModalImg" class="modalImage" src="assets/membersPortraits/DomoModal.jpg" alt="Domo">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Domo Genesis</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/DamierGenesis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/DamierGenesis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://open.spotify.com/artist/6vHBuUxrcpn1do5UaEJ7g6?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/6vHBuUxrcpn1do5UaEJ7g6?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/domogenesis/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/domogenesis/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">Purple Controlla</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3aHCIe17lKa27QHi00K7Ro" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3aHCIe17lKa27QHi00K7Ro"></iframe>
 			<h2 class="albumTitle">Genesis</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3mhZHDmHvIUAeAYH7MrXBW" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/3mhZHDmHvIUAeAYH7MrXBW"></iframe>
 		</div>
 	  </div>
 	</div>
 	<div id="LeftModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="LeftModalImg" class="modalImage" src="assets/membersPortraits/LeftModal.jpg" alt="Tyler">
+		<img id="LeftModalImg" class="modalImage" src="assets/membersPortraits/LeftModal.jpg" alt="Left">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Left Brain</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/leftbrainnn?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/leftbrainnn?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://open.spotify.com/artist/4vSjwZEchIL4yA0uLzoNjr?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/4vSjwZEchIL4yA0uLzoNjr?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/thatniggaleft1k/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/thatniggaleft1k/" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
-			<h2 class="albumTitle">
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5fDrIAwcbl9lyWGxI5UaaH" frameborder="0" allowtransparency="true"></iframe>
+			<h2 class="albumTitle">Yadada</h2>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5fDrIAwcbl9lyWGxI5UaaH"></iframe>
 		</div>
 	  </div>
 	</div>
@@ -242,22 +244,22 @@
 		<h2 class="modalTitle">Mike G</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/MikeGKTA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/MikeGKTA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://open.spotify.com/artist/1QdjL34EAib5zndNoqA2ly?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png"></a>
+				<a href="https://open.spotify.com/artist/1QdjL34EAib5zndNoqA2ly?autoplay=true" target="_blank"><img class="modalIcon" src="assets/spotifyIcon.png" alt="spotify"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/gomikeg/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/gomikeg/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 		<div class="musicDiv">
 			<h2 class="albumTitle">Mike Check</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/6fqH35Pl4kUWybm7Xg7DHS" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/6fqH35Pl4kUWybm7Xg7DHS"></iframe>
 			<h2 class="albumTitle">Mike Check v.2</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/6egju8bT9VKyqGTxGkGeRW" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/6egju8bT9VKyqGTxGkGeRW"></iframe>
 			<h2 class="albumTitle">Ali</h2>
-			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5cVudF06zoMgAbXIRkk6aR" frameborder="0" allowtransparency="true"></iframe>
+			<iframe class="spotifyLink" src="https://open.spotify.com/embed/album/5cVudF06zoMgAbXIRkk6aR"></iframe>
 		</div>
 	  </div>
 	</div>
@@ -268,41 +270,43 @@
 		<h2 class="modalTitle">Taco</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/oddfuckingtaco?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/oddfuckingtaco?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/yungtaco/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/yungtaco/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 	  </div>
 	</div>
 	<div id="JasperModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="JasperModalImg" class="modalImage" src="assets/membersPortraits/JasperModal.jpg" alt="Taco">
+		<img id="JasperModalImg" class="modalImage" src="assets/membersPortraits/JasperModal.jpg" alt="Jasper">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">Jasper Dolphin</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/JasperDolphin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/JasperDolphin?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/nastyboyjasper/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/nastyboyjasper/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 	  </div>
 	</div>
 	<div id="LBoyModal" class="memberModal">
 	  <div class="modalContent">
-		<img id="LBoyModalImg" class="modalImage" src="assets/membersPortraits/LBoyModal.jpg" alt="Taco">
+		<img id="LBoyModalImg" class="modalImage" src="assets/membersPortraits/LBoyModal.jpg" alt="LBoy">
 		<span class="closeModal" onclick="closeModal()">&times;</span>
 		<h2 class="modalTitle">L-Boy</h2>
 		<ul>
 			<li>
-				<a href="https://twitter.com/themustacheman?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png"></a>
+				<a href="https://twitter.com/themustacheman?lang=en" target="_blank"><img class="modalIcon" src="assets/twitterIcon.png" alt="twitter"></a>
 			</li>
 			<li>
-				<a href="https://www.instagram.com/damustacheman/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png"></a>
+				<a href="https://www.instagram.com/damustacheman/?hl=en" target="_blank"><img class="modalIcon" src="assets/instaIcon.png" alt="instagram"></a>
 			</li>
 		</ul>
 	  </div>
 	</div>
+</body>
+</html>
