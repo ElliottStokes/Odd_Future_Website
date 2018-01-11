@@ -1007,3 +1007,22 @@ a .nav-img{
 		margin-left:0px;
 	}
 }
+
+#DEMO{
+	margin: 10%;
+	width:80%
+}
+#criticalReview{
+	position: absolute;
+    top: 200px;
+	left: 40%;
+}
+.docLinks{
+	float: right;
+}
+#otherLinks{
+	width: 118px;
+    float: right;
+    margin-top: -110px;
+    margin-bottom: 5px;
+}

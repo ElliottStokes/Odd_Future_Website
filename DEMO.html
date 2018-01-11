@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>DEMO Video</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script src="https://code.jquery.com/jquery-1.6.1.js" integrity="sha256-Du92qVg6bHoet2TTP+N2v+GGHfefq4LCw/XRYYPoIBY=" crossorigin="anonymous"></script>
+	<script src="JS/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+
+</head>
+
+<body>
+<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500" height="100"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav front-page-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav front-page-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav front-page-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav front-page-nav" href="AlbumEditor.html"> Album Maker </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav front-page-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="otherLinks">
+			<a class="docLinks" href="DEMO.html">DEMO</a>
+			<a class="docLinks" href="criticalReview.html">Critical Review</a>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png" alt="donutIcon"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png" alt="TylerIcon"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png" alt="dolphinIcon"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png" alt="catIcon"	></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+	</div>	
+	<iframe id="DEMO" width="1000" height="600" src="https://www.youtube.com/embed/ohpbjQMyE78" allowfullscreen></iframe>
+</body>
+</html>
