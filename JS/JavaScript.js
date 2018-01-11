@@ -17,45 +17,49 @@ window.onload = function() {
 	showTitle();
 	showDivs();
 	
-	
-	editor_canvas = document.getElementById("albumEditor");
-	editor_context = editor_canvas.getContext('2d');
-	loadEditor();
-	var brushSize = 5;
-	var range = document.getElementById("paintbrushSize");
-	range.addEventListener("change", function(){
-		document.getElementById("rangeValue").innerHTML = range.value;
-		brushSize = range.value;
-	});
-	var brushColour;
-	var colourChange = document.getElementById("paintbrushColour");
-	colourChange.addEventListener("change", function(){
-		brushColour = colourChange.value;
-	});
-	
-	var eraserSize = 5;
-	var eraserRange = document.getElementById("eraserSize");
-	eraserRange.addEventListener("change", function(){
-		document.getElementById("eraserRangeValue").innerHTML = eraserRange.value;
-		eraserSize = eraserRange.value;
-	});
 	document.getElementById('h_canvas').addEventListener("mousedown",(function(e){
 		var xCord = e.pageX - this.offsetLeft - 25;
 		var yCord = e.pageY - this.offsetTop - 19;
 		console.log('e.pageX= ', e.pageX, 'e.pageY= ', e.pageY, 'this.offsetLeft= ', this.offsetLeft, 'this.offsetTop= ', this.offsetTop, 'x= ', xCord, 'y= ', yCord); 
-		
+	
 		drawLogo(xCord, yCord);
 	}));
+	
+	var runAlbumEditor = $('#albumEditorBody').attr("data-page");
+	console.log(runAlbumEditor);
+	if(runAlbumEditor == 'run'){
+		editor_canvas = document.getElementById("albumEditor");
+		editor_context = editor_canvas.getContext('2d');
+		loadEditor();
+		
+		var brushSize = 5;
+		var range = document.getElementById("paintbrushSize");
+		range.addEventListener("change", function(){
+			document.getElementById("rangeValue").innerHTML = range.value;
+			brushSize = range.value;
+		});
+		var brushColour;
+		var colourChange = document.getElementById("paintbrushColour");
+		colourChange.addEventListener("change", function(){
+			brushColour = colourChange.value;
+		});
+	
+		var eraserSize = 5;
+		var eraserRange = document.getElementById("eraserSize");
+		eraserRange.addEventListener("change", function(){
+			document.getElementById("eraserRangeValue").innerHTML = eraserRange.value;
+			eraserSize = eraserRange.value;
+		});
 
-	document.getElementById('albumEditor').addEventListener("mousedown", (function(e){
-		paintCheckBox = document.getElementById('paintCheckBox');
-		eraserCheckBox = document.getElementById('eraserCheckBox');
-		if(paintCheckBox.checked == false){
-			if(eraserCheckBox.checked == false){
-			var xCord = e.pageX - this.offsetLeft - 25;
-			var yCord = e.pageY - this.offsetTop - 30;
-			//console.log('e.pageX= ', e.pageX, 'e.pageY= ', e.pageY, 'this.offsetLeft= ', this.offsetLeft, 'this.offsetTop= ', this.offsetTop, 'x= ', xCord, 'y= ', yCord); 
-			drawEditorIcon(xCord, yCord);
+		document.getElementById('albumEditor').addEventListener("mousedown", (function(e){
+			paintCheckBox = document.getElementById('paintCheckBox');
+			eraserCheckBox = document.getElementById('eraserCheckBox');
+			if(paintCheckBox.checked == false){
+				if(eraserCheckBox.checked == false){
+				var xCord = e.pageX - this.offsetLeft - 25;
+				var yCord = e.pageY - this.offsetTop - 30;
+				//console.log('e.pageX= ', e.pageX, 'e.pageY= ', e.pageY, 'this.offsetLeft= ', this.offsetLeft, 'this.offsetTop= ', this.offsetTop, 'x= ', xCord, 'y= ', yCord); 
+				drawEditorIcon(xCord, yCord);
 			} else {
 				enable_eraser = true;
 				console.log(enable_eraser);
@@ -65,23 +69,25 @@ window.onload = function() {
 					EditorEraser(xCord, yCord, enable_eraser, eraserSize);
 				}));
 			}
-		} else {
-			enable_paint = true;
-			console.log(enable_paint);
-			document.getElementById('albumEditor').addEventListener("mousemove", (function(e){
-				var xCord = e.pageX - this.offsetLeft;
-				var yCord = e.pageY - this.offsetTop;
-				//console.log("x= " + xCord + " y= " + yCord + " enable_paint= " + enable_paint);
-				drawEditorPaint(xCord, yCord, enable_paint, brushSize, brushColour);
-			}));
-		}
-	}));
-	document.getElementById('albumEditor').addEventListener("mouseup", (function(e){
+			} else {
+				enable_paint = true;
+				console.log(enable_paint);
+				document.getElementById('albumEditor').addEventListener("mousemove", (function(e){
+					var xCord = e.pageX - this.offsetLeft;
+					var yCord = e.pageY - this.offsetTop;
+					//console.log("x= " + xCord + " y= " + yCord + " enable_paint= " + enable_paint);
+					drawEditorPaint(xCord, yCord, enable_paint, brushSize, brushColour);
+				}));
+			}
+		}));
+		document.getElementById('albumEditor').addEventListener("mouseup", (function(e){
 		console.log('up');
 		enable_paint = false;
 		enable_eraser = false;
-	}));
+		}));
 
+	};
+	
 }
 
 function changeIcon(icon){
