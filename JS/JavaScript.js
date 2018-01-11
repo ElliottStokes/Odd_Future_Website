@@ -7,21 +7,81 @@ var totalCost = 0;
 var interval = 30;
 var base_image;
 var iconImg = 'donut';
-var audioElement;
-
+var editor_canvas, editor_context;
+var droppedPos;
+var editorIcon;
+var paintCheckBox, enable_paint = false, enable_eraser = false;
 window.onload = function() {
 	h_canvas = document.getElementById("h_canvas");
 	my_context = h_canvas.getContext('2d');
 	showTitle();
 	showDivs();
 	
+	
+	editor_canvas = document.getElementById("albumEditor");
+	editor_context = editor_canvas.getContext('2d');
+	loadEditor();
+	var brushSize = 5;
+	var range = document.getElementById("paintbrushSize");
+	range.addEventListener("change", function(){
+		document.getElementById("rangeValue").innerHTML = range.value;
+		brushSize = range.value;
+	});
+	var brushColour;
+	var colourChange = document.getElementById("paintbrushColour");
+	colourChange.addEventListener("change", function(){
+		brushColour = colourChange.value;
+	});
+	
+	var eraserSize = 5;
+	var eraserRange = document.getElementById("eraserSize");
+	eraserRange.addEventListener("change", function(){
+		document.getElementById("eraserRangeValue").innerHTML = eraserRange.value;
+		eraserSize = eraserRange.value;
+	});
 	document.getElementById('h_canvas').addEventListener("mousedown",(function(e){
 		var xCord = e.pageX - this.offsetLeft - 25;
 		var yCord = e.pageY - this.offsetTop - 19;
 		console.log('e.pageX= ', e.pageX, 'e.pageY= ', e.pageY, 'this.offsetLeft= ', this.offsetLeft, 'this.offsetTop= ', this.offsetTop, 'x= ', xCord, 'y= ', yCord); 
 		
 		drawLogo(xCord, yCord);
-	})); 
+	}));
+
+	document.getElementById('albumEditor').addEventListener("mousedown", (function(e){
+		paintCheckBox = document.getElementById('paintCheckBox');
+		eraserCheckBox = document.getElementById('eraserCheckBox');
+		if(paintCheckBox.checked == false){
+			if(eraserCheckBox.checked == false){
+			var xCord = e.pageX - this.offsetLeft - 25;
+			var yCord = e.pageY - this.offsetTop - 30;
+			//console.log('e.pageX= ', e.pageX, 'e.pageY= ', e.pageY, 'this.offsetLeft= ', this.offsetLeft, 'this.offsetTop= ', this.offsetTop, 'x= ', xCord, 'y= ', yCord); 
+			drawEditorIcon(xCord, yCord);
+			} else {
+				enable_eraser = true;
+				console.log(enable_eraser);
+				document.getElementById('albumEditor').addEventListener("mousemove", (function(e){
+					var xCord = e.pageX - this.offsetLeft;
+					var yCord = e.pageY - this.offsetTop;
+					EditorEraser(xCord, yCord, enable_eraser, eraserSize);
+				}));
+			}
+		} else {
+			enable_paint = true;
+			console.log(enable_paint);
+			document.getElementById('albumEditor').addEventListener("mousemove", (function(e){
+				var xCord = e.pageX - this.offsetLeft;
+				var yCord = e.pageY - this.offsetTop;
+				//console.log("x= " + xCord + " y= " + yCord + " enable_paint= " + enable_paint);
+				drawEditorPaint(xCord, yCord, enable_paint, brushSize, brushColour);
+			}));
+		}
+	}));
+	document.getElementById('albumEditor').addEventListener("mouseup", (function(e){
+		console.log('up');
+		enable_paint = false;
+		enable_eraser = false;
+	}));
+
 }
 
 function changeIcon(icon){
@@ -29,7 +89,33 @@ function changeIcon(icon){
 	iconImg = icon;
 	hideIconList();
 }
+function changeEditorIcon(icon){
+	console.log('Editor Icon Change');
+	editorIcon = icon;
+}
+function drawEditorIcon(xCord, yCord){
+	editorImg = new Image();
+	editorImg.src = 'assets/AlbumCoverEditor/' + editorIcon + '.png';
+	
+	editor_context.drawImage(editorImg, xCord, yCord);
+}
+function drawEditorPaint(xCord, yCord, enable_paint_canvas, brushSize, brushColour){
+	if(enable_paint_canvas == true){
+		editor_context.beginPath();
+		editor_context.arc(xCord, yCord, brushSize, 0, 2 * Math.PI, false);
+		editor_context.fillStyle = brushColour;
+		editor_context.fill();
+	};
+}
+function EditorEraser(xCord, yCord, enable_eraser_canvas, eraserSize){
+	if(enable_eraser_canvas == true){
+		editor_context.clearRect(xCord, yCord, eraserSize, eraserSize);
+	}
+}
 
+function clearEditor(){
+	editor_context.clearRect(0, 0, 509, 512);
+}
 function showTitle(){
 	console.log("loaded func");
 	my_context.font = "61px Cooper Black";
@@ -57,6 +143,10 @@ function hideIconList(){
 	$('#showIconButton').css('display', 'block');
 }
 
+function loadEditor(){
+	console.log('Loaded Editor');
+}
+
 function getLocation() {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(tourMap);
@@ -75,17 +165,18 @@ function tourMap(position, x){
 	if (x != 1) {
 		var mapLat = position.coords.latitude;
 		console.log(mapLat);
-		var mapLng = position.coords.latitude;
+		var mapLng = position.coords.longitude;
 		console.log(mapLng);
 		
 		mapProp= {
 			center:new google.maps.LatLng(mapLat, mapLng),
-			zoom:5,
+			zoom:10,
 		};
 	}
 
 	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	
+	venueMarker({lat:mapLat,lng:mapLng}, ' ', map);
 	venueMarker({lat:37.768005,lng:-122.420528}, 'A', map);
 	venueMarker({lat:32.755548,lng:-117.212253}, 'B', map);
 	venueMarker({lat:33.437016,lng:-111.943981}, 'C', map);
@@ -115,29 +206,6 @@ function playMusicButton(title){
 	music.play();
 }
 
-/*function playSoundButton(e) {
-	event.preventDefault();
-	console.log('play track');
-	playSound(e);
-};
-function playSound(btn) {
-	console.log('play');
-	if(btn('class') == '.playing'){
-		$('.playBtn').removeClass('playing').text('Play');
-		audioElement.pause();
-	} else {
-		if(audioElement) {
-			audioElement.pause();
-		}
-		var soundFile = btn.data('sound');
-		audioElement = new Audio(soundFile);
-		btn.addClass('playing').text('Pause');
-		audioElement.play();
-	}
-	audioElement.onended = function() {
-		$('.playBtn').removeClass('playing').text('Play');
-	};
-}*/
 
 function favouriteVideo(x, y){
 	favVideoArray = new Array();
