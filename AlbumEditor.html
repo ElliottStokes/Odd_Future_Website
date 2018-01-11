@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ODD FUTURE</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+	<link rel="stylesheet" href="CSS/Stylesheet.css" >
+	<script src="https://code.jquery.com/jquery-1.6.1.js" integrity="sha256-Du92qVg6bHoet2TTP+N2v+GGHfefq4LCw/XRYYPoIBY=" crossorigin="anonymous"></script>
+	<script src="JS/jquery.easyui.min.js"></script>
+	<script src="JS/JavaScript.js"></script>
+
+</head>
+
+<body>
+	<div class="header">
+		<div>
+			<canvas class="header-canvas" id="h_canvas" width="1500" height="100"></canvas>
+		</div>
+		<div>
+			<nav>
+				<a class="border-nav front-page-nav" href="index.html">Home </a> 
+				<img class="nav-img" src="assets/bee.jpg" alt="bee">
+				<a class="border-nav front-page-nav" href="members.html"> Members </a>
+				<img class="nav-img" src="assets/cat.jpg" alt="cat">
+				<a class="border-nav front-page-nav" href="store.html"> Store </a>
+				<img class="nav-img" src="assets/frank.png" alt="frank">
+				<a class="border-nav front-page-nav" href="AlbumEditor.html"> Album Maker </a>
+				<img class="nav-img" src="assets/smlDoughnut.png" alt="doughnut">
+				<a class="border-nav front-page-nav" href="loiterSquad.html"> Loiter Squad </a>
+			</nav>
+		</div>
+		<div id="selectIconMenu">
+			<a onclick="changeIcon('donut')"><img class="iconMenu" src="assets/donut.png" alt="donutIcon"></a>
+			<a onclick="changeIcon('TylerFace')"><img class="iconMenu" src="assets/TylerFace.png" alt="TylerIcon"></a>
+			<a onclick="changeIcon('dolphin')"><img class="iconMenu" src="assets/dolphin.png" alt="dolphinIcon"></a>
+			<a onclick="changeIcon('catIcon')"><img class="iconMenu" src="assets/catIcon.png" alt="catIcon"	></a>
+		</div>
+		<a id="showIconButton" onclick="showIconList()"><div id="selectIcon">&#187;</div></a>
+	</div>
+	<section id="albumEditorSection">
+		<img id="albumCase" src="assets/AlbumCoverEditor/blankCase_Canvas.png" alt="blankCD">
+		<canvas id="albumEditor" width="509" height="512"></canvas>
+		<div class="editorMenu">
+			<h1 class="editorMenuTitle">Icons</h1>
+			<div class="editorMenuContent">
+			<a onclick="changeEditorIcon('donut')"><img class="editorMenuIcons" src="assets/donut.png" alt="donutIcon"></a>
+			<a onclick="changeEditorIcon('TylerFace')"><img class="editorMenuIcons" src="assets/TylerFace.png" alt="TylerIcon"></a>
+			<a onclick="changeEditorIcon('dolphin')"><img class="editorMenuIcons" src="assets/dolphin.png" alt="dolphinIcon"></a>
+			<a onclick="changeEditorIcon('catIcon')"><img class="editorMenuIcons" src="assets/catIcon.png" alt="catIcon"></a>
+			<a onclick="changeEditorIcon('AlbumBee')"><img class="editorMenuIcons" src="assets/AlbumBee.png" alt="Bee"></a>
+			<a onclick="changeEditorIcon('OddFuture')"><img class="editorMenuIcons" src="assets/OddFutureName.png" alt="OFWGKTA"></a>
+			</div>
+		</div>
+		<div class="editorMenu">
+			<h1 class="editorMenuTitle">Paintbrush</h1>
+			<div class="editorMenuContent" id="firstMenuContent">
+				<div class="editorMenuContentSection">
+					<img class="editorMenuPaintIcons" src="assets/AlbumCoverEditor/paintbrush.png" alt="paintbrush">
+					<p class="editorMenuPaintText">Enable to Paint</p>
+					<input class="checkBox" id="paintCheckBox" type="checkbox" name="paintCheck" value="paint"/>
+					<p class="editorMenuPaintText">Brush Size</p>
+					<p class="editorMenuPaintText" id="rangeValue">5</p>
+					<input type="range" min="5" max="25" value="5" class="slider" id="paintbrushSize"/>
+					<p class="editorMenuPaintText">Brush colour</p>
+					<input type="color" id="paintbrushColour"/>
+				</div>
+				<div class="editorMenuContentSection">
+					<h1 class="editorMenuTitle">Eraser</h1>
+					<img class="editorMenuPaintIcons" src="assets/AlbumCoverEditor/eraser.png" alt="eraser">
+					<p class="editorMenuPaintText">Enable for Eraser</p>
+					<input class="checkBox" id="eraserCheckBox" type="checkbox" name="eraserCheck" value="eraser"/>
+					<p class="editorMenuPaintText" id="eraserRangeValue">5</p>
+					<input type="range" min="5" max="25" value="5" class="slider" id="eraserSize"/>
+				</div>
+			</div>
+		</div>
+		<div id="editorToolbar">
+			<button class="editorToolbarButton" onclick="clearEditor()">Clear All</button>
+		</div>
+	</section>

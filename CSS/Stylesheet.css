@@ -195,6 +195,7 @@ a .nav-img{
 .mySlides {
 	width: 100%;
 	border: 3px solid white;
+	display: none;
 }
 
 #indexSectionTwo{
@@ -316,7 +317,8 @@ a .nav-img{
 .member-button:nth-of-type(even) {
 	color: #317274;
 }
-
+/*This is a media queiry which is set to change the layout of the members profiles.
+ *increasing the height of each members section and moving the members portrait to the center of the browser*/
 @media only screen and (max-width: 600px) {
 	.member-row{
 		border-top: 3px solid #FFFFFF;
@@ -821,4 +823,166 @@ a .nav-img{
 .storeItemDetail{
 	text-align: center;
 	margin: 3px;
+}
+
+/*Album Editor*/
+#albumEditor{
+	margin-left: 85px;
+	z-index:1;
+}
+#albumCase{
+	display: block;
+    margin-bottom: -521px;
+    margin-left: 15px;
+}
+#droppableEditor{
+	position: absolute;
+    height: 512px;
+    width: 509px;
+    /* border: 3px solid black; */
+    top: 186px;
+    left: 85px;
+}
+#albumEditorSection{
+	background-color: #000000;
+	padding: 10px;
+	padding-bottom: 30px;
+	padding-right: 10%;
+}
+@media only screen and (max-width: 1200px){
+	#albumEditorSection{
+		padding-right: 2%;
+	}
+}
+.editorMenu{
+	float: right;
+    border: 3px solid #FFFE27;
+    width: 18%;
+    height: 525px;
+    margin-left: 1%;
+	max-width: 266px;
+	max-height: 525px;
+}
+.editorMenuTitle{
+	color: #FF8DA4;
+	text-align: center;
+	font-size: 35px;
+	margin: 5px 0px;
+	border-bottom: 3px solid #FFFE27;
+}
+.editorMenuContent{
+	width: 100%;
+    height: 91%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: -5px;
+}
+#firstMenuContent{
+	overflow: hidden;
+}
+.editorMenuIcons{
+	width: 100%;
+}
+#editorToolbar{
+	margin-top: 20px;
+    padding-left: 15px;
+}
+.editorMenuPaintText{
+	color: #FFFE27;
+    margin-top: 10px;
+    margin-left: 22%;
+}
+.checkBox{
+	margin-left: 47%;
+    margin-top: -7px;
+}
+.editorMenuPaintIcons{
+	width: 20%;
+    margin-left: 40%;
+	margin-right: 40%;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+	margin-left: 21%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+#rangeValue{
+	margin-top: -15px;
+    margin-bottom: -20px;
+    margin-left: 11%;
+}
+#paintbrushColour{
+	margin-top: -10px;
+    margin-left: 22%;
+}
+.editorMenuContentSection{
+	border-bottom: 3px solid #fffe27;
+    padding-bottom: 10px;
+}
+#eraserRangeValue{
+    margin-top: 15px;
+    margin-bottom: -20px;
+    margin-left: 11%;
+}
+@media only screen and (max-width: 1050px){
+	.editorMenu{
+		margin-top: 80px;
+		margin-left: 5%;
+		margin-right: 5%;
+		width: 34%;
+		max-width: 500px;
+		float: right;
+	}
+	#albumEditor{
+		margin-left: 221px;
+	}
+	#albumCase{
+		margin-left: 150px;
+	}
+	.editorToolbarButton{
+		margin-left: 150px;
+		margin-top: -580px;
+	}
+}
+@media only screen and (max-width: 880px){
+	#albumEditor{
+		margin-left:121px;
+	}
+	#albumCase{
+		margin-left: 50px;
+	}
+}
+@media only screen and (max-width: 700px){
+	#albumEditor{
+		margin-left:71px;
+	}
+	#albumCase{
+		margin-left:0px;
+	}
 }
