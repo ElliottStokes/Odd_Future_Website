@@ -725,7 +725,7 @@ a .nav-img{
 }
 #emptyCart{
 	position: absolute;
-    top: 155px;
+    top: 280px;
     right: 185px;
 }
 #cartMsg{
@@ -849,6 +849,20 @@ a .nav-img{
 	padding-bottom: 30px;
 	padding-right: 10%;
 }
+#clearEditor{
+	background-color: black;
+	color: white;
+	border: 3px solid white;
+	border-radius: 10px;
+	padding: 5px;
+	font-family: Cooper Black;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+#clearEditor:hover{
+	background-color: #FF8DA4;
+}
 @media only screen and (max-width: 1200px){
 	#albumEditorSection{
 		padding-right: 2%;
@@ -954,8 +968,8 @@ a .nav-img{
 	.editorMenu{
 		margin-top: 80px;
 		margin-left: 5%;
-		margin-right: 5%;
-		width: 34%;
+		margin-right: 11%;
+		width: 28%;
 		max-width: 500px;
 		float: right;
 	}
@@ -967,7 +981,14 @@ a .nav-img{
 	}
 	.editorToolbarButton{
 		margin-left: 150px;
-		margin-top: -580px;
+		margin-top: -580px;	
+	}
+	#clearEditor{
+		margin-top: 0px;
+		margin-left: 12px;
+	}
+	#albumEditorSection{
+		padding-bottom: 600px;
 	}
 }
 @media only screen and (max-width: 880px){
